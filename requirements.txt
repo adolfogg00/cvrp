@@ -1,1 +1,2 @@
 opt-flow-lib==0.1.0
+folium==0.20.0

@@ -5,11 +5,6 @@ from structure.node import Node
 from structure.instance import Instance
 
 
-class InstanceReader:
-    """
-    Reads CVRP instances in Augerat format.
-    """
-
 from pathlib import Path
 
 
