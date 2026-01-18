@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class OROptArgs:
+class OrOptArgs:
     route_index: int    # route where the segment is moved
     i: int              # start index of the segment to move
     length: int         # length of the segment

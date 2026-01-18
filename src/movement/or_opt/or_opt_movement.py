@@ -3,11 +3,11 @@ from typing import List
 from structure.route import Route
 from structure.node import Node
 from structure.individual import Individual
-from movement.or_opt.or_opt_args import OROptArgs
+from movement.or_opt.or_opt_args import OrOptArgs
 
-class OROptMovement(Movement):
+class OrOptMovement(Movement):
 
-    def execute(self, args: OROptArgs):
+    def execute(self, args: OrOptArgs):
         individual: Individual = self.individual
         route: Route = individual.routes[args.route_index]
 
@@ -36,7 +36,7 @@ class OROptMovement(Movement):
         # Insert segment after node j
         node_list[j+1:j+1] = segment
 
-    def simulate(self, args: OROptArgs) -> int:
+    def simulate(self, args: OrOptArgs) -> int:
         individual: Individual = self.individual
         route: Route = individual.routes[args.route_index]
         delta = self._calculate_delta(route.node_list, args.i, args.length, args.j, individual.instance.dist_matrix)
