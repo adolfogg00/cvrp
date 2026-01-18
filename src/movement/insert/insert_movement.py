@@ -22,7 +22,8 @@ class InsertMovement(Movement):
             )
 
         individual.total_distance += delta
-
+        individual.total_assigned_nodes += 1
+        
         nodes.insert(args.insert_index, args.node)
         route.used_capacity += args.node.demand
 

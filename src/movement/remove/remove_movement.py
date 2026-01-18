@@ -21,6 +21,7 @@ class RemoveMovement(Movement):
             )
 
         individual.total_distance += delta
+        individual.total_assigned_nodes -= 1
 
         # Remove node
         route.used_capacity -= nodes[args.remove_index].demand
